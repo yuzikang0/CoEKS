@@ -2,6 +2,7 @@
 ## Paper
 The paper associated with this codebase can be found here [Combination-of-Experts with Knowledge Sharing for Cross-Task Vehicle Routing Problems](https://openreview.net/forum?id=lHBs9mbgwp)
 
+<<<<<<< HEAD
 
 
 ## 🚀 Installation
@@ -46,3 +47,6 @@ year={2026},
 - https://github.com/ai4co/routefinder
 - https://github.com/RoyalSkye/Routing-MVMoE
 - https://github.com/ai4co/rl4co
+=======
+Code coming soon! We are currently cleaning up the codebase and will release it shortly.
+>>>>>>> ed0201ee7986b2690e8aa9fa57b9647650bb332d
