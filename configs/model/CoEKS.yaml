@@ -1,0 +1,4 @@
+_target_: CoEKS.models.baselines.CoEKS.CoEKS
+
+policy:
+  _target_: CoEKS.models.baselines.CoEKS.policy.CoEKSPolicy

@@ -1,0 +1,30 @@
+# @package _global_
+
+# Override defaults by taking another config
+defaults:
+  - rfbase-50.yaml
+  - _self_
+
+env:
+  generator_params:
+    variant_preset: "all"
+#    subsample: False
+    subsample: True
+
+model:
+  _target_: CoEKS.models.baselines.CoEKS.model.CoEKS
+  test_batch_size: ${model.val_batch_size}
+  policy:
+    _target_: CoEKS.models.baselines.CoEKS.policy.CoEKSPolicy
+    hierarchical_gating: False
+#  normalize_reward: "none"
+
+# Logging: we use Wandb in this case
+logger:
+  wandb:
+    tags: ["CoEKS", "${env.name}", "sfs"]
+    group: "${env.generator_params.num_loc}-${env.name}"
+    name: "CoEKS-${env.generator_params.num_loc}-main"
+    project: "1"
+    mode: "offline" 
+
